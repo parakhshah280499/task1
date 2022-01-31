@@ -28,6 +28,7 @@ class item{
         input.style.position="realtive";
         input.style.marginLeft="80px";
         input.style.fontSize="15px";
+        input.style.width="40%";
 
         var chec=document.createElement("INPUT");
         chec.setAttribute("type", "checkbox");
