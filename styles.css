@@ -2,14 +2,22 @@
 {
     border: 1px solid;
     padding: 10px;
-    height: 1500px;
-    width: 550px;
-    margin-left: 550px;
-    background-color: white;
+    height: 100%;
+    width: 100%;
+    /* background-color: white; */
     box-shadow: 8px 8px 8px 8px #cfc9c9;
+    text-align: center;
 
 
+}
 
+div.heading_name
+{
+    display: inline-block;
+    text-align: center;
+    width: 36%;
+    background-color: #FFFFFF;
+    box-shadow: 8px 8px 8px 8px #cfc9c9;
 }
 body
 {
@@ -42,7 +50,7 @@ body
 {
     /* position: relative;
     left:200px; */
-    width: 91%;
+    width: 90%;
     background-color: #000; /* Green */
     border: none;
     color: white;
@@ -52,20 +60,54 @@ body
     font-size: 20px;
     margin-bottom: 5px;
     border: 1px solid #000;
+    cursor: pointer;
     
 
 }
 
+.div1
+{
+    width:90%;
+    margin: 0 auto;
+
+}
+
+.movement
+{
+    width:80%;
+    display: inline-block;
+}
+
+.movement a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    border-style: solid;
+    border-color: pink;
+    border-width: 1px;
+    padding: 5px;
+    width: 28%;
+    font-size: 13px;
+    font-family: "sans-serif";
+}
+
+.div2
+{
+    text-align: left;
+    margin-top: 5px;
+    display: inline-block;
+    width: 80%;
+}
 #all
 {   
     position: relative;
     left:-10px;
-    width:25%;
+    width:30%;
     padding: 10px 30px;
     background-color: #FFFFFF;
     border: 1px solid #000;
     font-size: medium;
-    
+    cursor: pointer;
 
 }
 
@@ -73,11 +115,12 @@ body
 {
     position: relative;
     left:-5px;
-    width:25%;
+    width:30%;
     padding: 10px 30px;
     background-color: white;
     border: 1px solid #000;
     font-size: medium;
+    cursor: pointer;
 
 }
 
@@ -85,18 +128,31 @@ body
 {
     position: relative;
     left:0px;
-    width:25%;
+    width:38%;
     padding: 10px 30px;
     background-color: white;
     border: 1px solid #000;
     font-size: medium;
+    cursor: pointer;
 
+}
+.add:active {
+    transform: translateY(4px);
+}
+.all:active {
+    transform: translateY(4px);
+}
+.activ2:active {
+    transform: translateY(4px);
+}
+.comp:active {
+    transform: translateY(4px);
 }
 
 #remain
 {
     position: relative;
-    right:120px;
+    right:20%;
     margin-bottom: 30px;
 }
 
@@ -121,25 +177,51 @@ body
     font-size: 12px;
 }
 
+.button_combined
+{
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 25px;
+}
 #edit
 {
     position: relative;
     left:20px;
-    width:42%;
+    width:49%;
     bottom: 50px;
     padding: 10px 10px;
     background-color: #FFFFFF;
     outline-style: solid;
     outline-color: black;
     outline-width: thin;
-    font-size: 20px;    
+    font-size: 20px;  
+    cursor: pointer;  
 }
+.edit
+{
+    position: relative;
+    left:20px;
+    width:49%;
+    bottom: 50px;
+    padding: 10px 10px;
+    background-color: #FFFFFF;
+    outline-style: solid;
+    outline-color: black;
+    outline-width: thin;
+    font-size: 20px;  
+    cursor: pointer;  
+}
+
 
 #delete
 {
     position: relative;
     left:20px;
-    width:42%;
+    width: 49%;
     bottom: 50px;
     padding: 10px 30px;
     background-color: rgba(190, 28, 28, 0.993);
@@ -148,7 +230,24 @@ body
     outline-color: black;
     outline-width: thin;
     font-size: 20px;
-    
+    cursor: pointer;  
+
+}
+.delete
+{
+    position: relative;
+    left:20px;
+    width: 49%;
+    bottom: 50px;
+    padding: 10px 30px;
+    background-color: rgba(190, 28, 28, 0.993);
+    color: white;
+    outline-style: solid;
+    outline-color: black;
+    outline-width: thin;
+    font-size: 20px;
+    cursor: pointer;  
+
 }
 
 
@@ -169,7 +268,7 @@ body
     display: grid;
     place-content: center;
     position: relative;
-    left: 75px;
+    left: 40px;
   }
   
   input[type="checkbox"]::before {
@@ -197,7 +296,7 @@ body
   {
       position: relative;
       bottom: 25px;
-      right: 150px;
+      right: -70px;
   }
-
+  
   

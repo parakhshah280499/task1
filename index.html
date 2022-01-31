@@ -5,142 +5,131 @@
     </head>
     <body>
         <div id="setborder"> 
-        <p id="heading">What needs to be done ?</p>
-    <form action=""> 
-        <label for="activ"> </label><br>
-        <input type="text" id="activ" name="activ"><br>
-        <button id="add" type="button">Add</button><br>
-        <button id="all" type="button">All</button>
-        <button id="activ2" type="button">Active</button>
-        <button id="comp" type="button">Completed</button>
-        <h2 id="remain">10 tasks remaining</h2>
-    </form>
-    <form action="">
-        <label class="form-control">
-            <input type="checkbox" name="checkbox-checked" checked/>
-            <p id="tex"> Item 1</p><br>
-            <button id="edit" type="button">Edit</button>
-            <button id="delete" type="button">Delete</button><br>
-        </label>
-        <label class="form-control">
-            <input type="checkbox" name="checkbox-checked" />
-            <p id="tex"> Item 2</p><br>
-            <button id="edit" type="button">Edit</button>
-            <button id="delete" type="button">Delete</button><br>
-        </label>
-        <label class="form-control">
-            <input type="checkbox" name="checkbox-checked" />
-            <p id="tex"> Item 3</p><br>
-            <button id="edit" type="button">Edit</button>
-            <button id="delete" type="button">Delete</button><br>
-        </label>
-        <label class="form-control">
-            <input type="checkbox" name="checkbox-checked" />
-            <p id="tex"> Item 4</p><br>
-            <button id="edit" type="button">Edit</button>
-            <button id="delete" type="button">Delete</button><br>
-        </label>
-        <label class="form-control">
-            <input type="checkbox" name="checkbox-checked" />
-            <p id="tex"> Item 5</p><br>
-            <button id="edit" type="button">Edit</button>
-            <button id="delete" type="button">Delete</button><br>
-        </label>
-        <label class="form-control">
-            <input type="checkbox" name="checkbox-checked" />
-            <p id="tex"> Item 6</p><br>
-            <button id="edit" type="button">Edit</button>
-            <button id="delete" type="button">Delete</button><br>
-        </label>
-        <label class="form-control">
-            <input type="checkbox" name="checkbox-checked" />
-            <p id="tex"> Item 7</p><br>
-            <button id="edit" type="button">Edit</button>
-            <button id="delete" type="button">Delete</button><br>
-        </label>
-        <label class="form-control">
-            <input type="checkbox" name="checkbox-checked" />
-            <p id="tex"> Item 8</p><br>
-            <button id="edit" type="button">Edit</button>
-            <button id="delete" type="button">Delete</button><br>
-        </label>
-        <label class="form-control">
-            <input type="checkbox" name="checkbox-checked" />
-            <p id="tex"> Item 9</p><br>
-            <button id="edit" type="button">Edit</button>
-            <button id="delete" type="button">Delete</button><br>
-        </label>
-        <label class="form-control">
-            <input type="checkbox" name="checkbox-checked" />
-            <p id="tex"> Item 10</p><br>
-            <button id="edit" type="button">Edit</button>
-            <button id="delete" type="button">Delete</button><br>
-        </label>
+            <div class="heading_name">
+                <p class="heading" id="heading">What needs to be done ?</p>
+                <form id="formtodo" class="form-add-todo">
+                    <label for="activ"> </label><br>
+                    <input type="text" id="activ" class="activ" placeholder="Add Task . . ."><br>
+                </form>
+                
+                <button id="add" class="add" type="button" onclick="clickadd()" >Add</button><br>
+                
+                <div class="div1">
+                    <div class="movement">
+                        <button id="all" class="all" type="button">All</button>
+                        <button id="activ2" class="activ2" type="button">Active</button>
+                        <button id="comp" class="comp" type="button">Completed</button>
+                        <h2 id="remain">10 tasks remaining</h2>
 
-         
-    </form>
-    <!-- <label class="items">item 1
-        <input id ="check1" type="checkbox" checked="checked"><br>
-        <span class="check1"></span>
-        <button id="edit" type="button">Edit</button>
-        <button id="delete" type="button">Delete</button><br>
-    </label>
-    <label class="items">item 2
-        <input id ="check1" type="checkbox" ><br>
-        <button id="edit" type="button">Edit</button>
-        <button id="delete" type="button">Delete</button><br>
-    </label>
-    <label class="items">item 2
-        <input id ="check1" type="checkbox" ><br>
-        <button id="edit" type="button">Edit</button>
-        <button id="delete" type="button">Delete</button><br>
-    </label>
-    <label class="items">item 3
-        <input id ="check1" type="checkbox" ><br>
-        <button id="edit" type="button">Edit</button>
-        <button id="delete" type="button">Delete</button><br>
-    </label>
-    <label class="items">item 4
-        <input id ="check1" type="checkbox" ><br>
-        <button id="edit" type="button">Edit</button>
-        <button id="delete" type="button">Delete</button><br>
-    </label>
-    <label class="items">item 5
-        <input id ="check1" type="checkbox" ><br>
-        <button id="edit" type="button">Edit</button>
-        <button id="delete" type="button">Delete</button><br>
-    </label>
-    <label class="items">item 6
-        <input id ="check1" type="checkbox" ><br>
-        <button id="edit" type="button">Edit</button>
-        <button id="delete" type="button">Delete</button><br>
-    </label>
-    <label class="items">item 7
-        <input id ="check1" type="checkbox" ><br>
-        <button id="edit" type="button">Edit</button>
-        <button id="delete" type="button">Delete</button><br>
-    </label>
-    <label class="items">item 8
-        <input id ="check1" type="checkbox" ><br>
-        <button id="edit" type="button">Edit</button>
-        <button id="delete" type="button">Delete</button><br>
-    </label>
-    <label class="items">item 9
-        <input id ="check1" type="checkbox" ><br>
-        <button id="edit" type="button">Edit</button>
-        <button id="delete" type="button">Delete</button><br>
-    </label>
-    <label class="items">item 10
-        <input id ="check1" type="checkbox" ><br>
-        <button id="edit" type="button">Edit</button>
-        <button id="delete" type="button">Delete</button><br>
-    </label>
-    <label class="items">item 11
-        <input id ="check1" type="checkbox" ><br>
-        <button id="edit" type="button">Edit</button>
-        <button id="delete" type="button">Delete</button><br>
-    </label> -->
+                    </div>
+
+                <div id="div2" class="div2">
+                     <!-- <label class="form-control">
+                     <input type="checkbox" name="checkbox-checked" checked/>
+                     <p id="tex"> Item 1</p><br>
+                    </label>
+
+                     <div class="button_combined"?>
+                         <button id="edit" class="edit" type="button">Edit</button>
+                         <button id="delete" class="delete" type="button">Delete</button><br>
+                    </div>
+
+                    <label class="form-control">
+                        <input type="checkbox" name="checkbox-checked" />
+                        <p id="tex"> Item 2</p><br>
+                    </label>
+
+                    <div class="button_combined"?>
+                        <button id="edit" type="button">Edit</button>
+                        <button id="delete" type="button">Delete</button><br>
+                    </div>
+                    <label class="form-control">
+                        <input type="checkbox" name="checkbox-checked" />
+                        <p id="tex"> Item 3</p><br>
+                    </label>
+
+                    <div class="button_combined"?>
+                        <button id="edit" type="button">Edit</button>
+                        <button id="delete" type="button">Delete</button><br>
+                    </div>
+
+                    <label class="form-control">
+                        <input type="checkbox" name="checkbox-checked" />
+                        <p id="tex"> Item 4</p><br>
+                    </label>
+
+                    <div class="button_combined"?>
+                        <button id="edit" type="button">Edit</button>
+                        <button id="delete" type="button">Delete</button><br>
+                    </div>
+        
+                    <label class="form-control">
+                        <input type="checkbox" name="checkbox-checked" />
+                        <p id="tex"> Item 5</p><br>
+                    </label>
+
+                    <div class="button_combined"?>
+                        <button id="edit" type="button">Edit</button>
+                        <button id="delete" type="button">Delete</button><br>
+                    </div>
+
+                    <label class="form-control">
+                        <input type="checkbox" name="checkbox-checked" />
+                        <p id="tex"> Item 6</p><br>
+                    </label>
+
+                    <div class="button_combined"?>
+                        <button id="edit" type="button">Edit</button>
+                        <button id="delete" type="button">Delete</button><br>
+                    </div>
+        
+                    <label class="form-control">
+                        <input type="checkbox" name="checkbox-checked" />
+                        <p id="tex"> Item 7</p><br>
+                    </label>
+
+                    <div class="button_combined"?>
+                        <button id="edit" type="button">Edit</button>
+                        <button id="delete" type="button">Delete</button><br>
+                    </div>
+        
+                    <label class="form-control">
+                        <input type="checkbox" name="checkbox-checked" />
+                        <p id="tex"> Item 8</p><br>
+                    </label>
+
+                    <div class="button_combined"?>
+                        <button id="edit" type="button">Edit</button>
+                        <button id="delete" type="button">Delete</button><br>
+                    </div>
+    
+                    <label class="form-control">
+                        <input type="checkbox" name="checkbox-checked" />
+                        <p id="tex"> Item 9</p><br>
+                    </label>
+
+                    <div class="button_combined"?>
+                        <button id="edit" type="button">Edit</button>
+                        <button id="delete" type="button">Delete</button><br>
+                    </div>
+            
+                    <label class="form-control">
+                        <input type="checkbox" name="checkbox-checked" />
+                        <p id="tex"> Item 10</p><br>
+                    </label>
+
+                    <div class="button_combined"?>
+                        <button id="edit" type="button">Edit</button>
+                        <button id="delete" type="button">Delete</button><br>
+            
+                    </div> -->
+                </div>
+                </div> 
+            </div>    
         </div>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="todolist.js"></script>
     </body>
 </html>
 
