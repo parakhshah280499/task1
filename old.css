@@ -1,0 +1,305 @@
+#setborder
+{
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+
+
+}
+
+div.heading_name
+{
+    display: inline-block;
+    text-align: center;
+    width: 36%;
+    background-color: #FFFFFF;
+    box-shadow: 8px 8px 8px 8px #cfc9c9;
+}
+body
+{
+    text-align: center;
+    background-color : rgb(240, 236, 236);
+
+}
+#heading
+{
+    /* position: relative;
+    left: 300px; */
+    /* /* font-size: 30px;
+    margin-bottom: -15px; */
+}
+
+#activ
+{
+    /* position:relative;
+    left:200px; */
+    width: 90%;
+    padding-top: 5px;
+    padding-bottom: 30px;
+    border: 1px solid #000;
+    margin-bottom: 5px;
+    font-size: medium;
+
+}
+
+#add
+{
+    /* position: relative;
+    left:200px; */
+    width: 90%;
+    background-color: #000; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: 5px;
+    border: 1px solid #000;
+    cursor: pointer;
+    
+
+}
+
+.div1
+{
+    width:90%;
+    margin: 0 auto;
+
+}
+
+.movement
+{
+    width:80%;
+    display: inline-block;
+}
+
+.movement a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    border-style: solid;
+    border-color: pink;
+    border-width: 1px;
+    padding: 5px;
+    width: 28%;
+    font-size: 13px;
+    font-family: "sans-serif";
+}
+
+.div2
+{
+    text-align: left;
+    margin-top: 5px;
+    display: inline-block;
+    width: 80%;
+}
+#all
+{   
+    position: relative;
+    left:-10px;
+    width:30%;
+    padding: 10px 30px;
+    background-color: #FFFFFF;
+    border: 1px solid #000;
+    font-size: medium;
+    cursor: pointer;
+
+}
+
+#activ2
+{
+    position: relative;
+    left:-5px;
+    width:30%;
+    padding: 10px 30px;
+    background-color: white;
+    border: 1px solid #000;
+    font-size: medium;
+    cursor: pointer;
+
+}
+
+#comp
+{
+    position: relative;
+    left:0px;
+    width:38%;
+    padding: 10px 30px;
+    background-color: white;
+    border: 1px solid #000;
+    font-size: medium;
+    cursor: pointer;
+
+}
+.add:active {
+    transform: translateY(4px);
+}
+.all:active {
+    transform: translateY(4px);
+}
+.activ2:active {
+    transform: translateY(4px);
+}
+.comp:active {
+    transform: translateY(4px);
+}
+
+#remain
+{
+    position: relative;
+    right:20%;
+    margin-bottom: 0px;
+}
+
+#check1
+{
+    position: relative;
+    right:60px;
+    /* font-size: 350px; */
+    margin-bottom: 20px;
+    transform: scale(2);
+    margin-top: 20px;
+    outline-style: solid;
+    outline-color: black;
+    outline-width: 0.03px;
+
+}
+
+.items
+{
+    position: relative;
+    right:150px;
+    font-size: 12px;
+}
+
+.button_combined
+{
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 25px;
+} 
+#edit
+{
+    position: relative;
+    left:20px;
+    width:49%;
+    bottom: 50px;
+    padding: 10px 10px;
+    background-color: #FFFFFF;
+    outline-style: solid;
+    outline-color: black;
+    outline-width: thin;
+    font-size: 20px;  
+    cursor: pointer;  
+}
+.edit
+{
+    position: relative;
+    left:20px;
+    width:49%;
+    top:100px;
+    bottom: 50px;
+    padding: 10px 10px;
+    background-color: #FFFFFF;
+    outline-style: solid;
+    outline-color: black;
+    outline-width: thin;
+    font-size: 20px;  
+    cursor: pointer;  
+}
+
+
+#delete
+{
+    position: relative;
+    left:20px;
+    width: 49%;
+    bottom: 50px;
+    padding: 10px 30px;
+    background-color: rgba(190, 28, 28, 0.993);
+    color: white;
+    outline-style: solid;
+    outline-color: black;
+    outline-width: thin;
+    font-size: 20px;
+    cursor: pointer;  
+
+}
+.delete
+{
+    position: relative;
+    left:20px;
+    width: 49%;
+    bottom: 50px;
+    top:100px;
+    padding: 10px 30px;
+    background-color: rgba(190, 28, 28, 0.993);
+    color: white;
+    outline-style: solid;
+    outline-color: black;
+    outline-width: thin;
+    font-size: 20px;
+    cursor: pointer;  
+
+}
+
+
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--form-background);
+    margin: -15px;
+  
+    font: inherit;
+    color: currentColor;
+    width: 2em;
+    height: 2em;
+    border: 0.12em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+  
+    display: grid;
+    place-content: center;
+    position: relative;
+    left: 40px;
+  }
+  
+  input[type="checkbox"]::before {
+    content: "";
+    width: 1em;
+    height: 1em;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    background-color: CanvasText;
+  }
+  
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
+  
+  input[type="checkbox"]:focus {
+    outline: max(2px, 0.15em) solid currentColor;
+    outline-offset: max(2px, 0.15em);
+  }
+  
+  #tex
+  {
+      position: relative;
+      bottom: 25px;
+      right: -70px;
+  }
+  
+  .markComplete{
+    color: grey;
+    text-decoration: line-through;
+  
+  }

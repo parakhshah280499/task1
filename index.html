@@ -3,27 +3,27 @@
     <head>
         <link rel="stylesheet" href="styles.css">
     </head>
-    <body>
-        <div id="setborder"> 
+    <body >
+        <div class="setborder"> 
             <div class="heading_name">
-                <p class="heading" id="heading">What needs to be done ?</p>
-                <form id="formtodo" class="form-add-todo">
+                <p style = "margin-top: 35px"></p>
+                <label class="heading" id="heading">What needs to be done ?</label>
                     <label for="activ"> </label><br>
                     <input type="text" id="activ" class="activ" placeholder="Add Task . . ."><br>
-                </form>
                 
-                <button id="add" class="add" type="button" onclick="clickadd()" >Add</button><br>
+                <button id="add" class="add" type="button" onclick = "onAddTask()" >Add</button><br>
                 
                 <div class="div1">
                     <div class="movement">
                         <button id="all" class="all" type="button">All</button>
                         <button id="activ2" class="activ2" type="button">Active</button>
                         <button id="comp" class="comp" type="button">Completed</button>
-                        <h2 id="remain">10 tasks remaining</h2>
 
                     </div>
 
                 <div id="div2" class="div2">
+                    <p class = "remaining" id="remaining"></p>
+
                      <!-- <label class="form-control">
                      <input type="checkbox" name="checkbox-checked" checked/>
                      <p id="tex"> Item 1</p><br>

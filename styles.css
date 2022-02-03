@@ -1,104 +1,204 @@
-#setborder
-{
-    border: 1px solid;
-    padding: 10px;
+
+
+
+   .setborder {
+    text-align: center;
     height: 100%;
     width: 100%;
-    /* background-color: white; */
-    box-shadow: 8px 8px 8px 8px #cfc9c9;
-    text-align: center;
-
-
-}
-
-div.heading_name
+    }
+    
+    div.heading_name {
+        display: inline-block;
+        text-align: center;
+        width: 36%;
+        background-color: #FFFFFF;
+        box-shadow: 0px 5px 5px 5px #C0C0C0;
+    }
+    body
 {
-    display: inline-block;
-    text-align: center;
-    width: 36%;
-    background-color: #FFFFFF;
-    box-shadow: 8px 8px 8px 8px #cfc9c9;
-}
-body
-{
-    text-align: center;
-    background-color : rgb(240, 236, 236);
+    background-color : rgb(224,218,218);
 
 }
-#heading
-{
-    /* position: relative;
-    left: 300px; */
-    font-size: 30px;
-    margin-bottom: -15px;
-}
-
 #activ
 {
-    /* position:relative;
-    left:200px; */
-    width: 90%;
-    padding-top: 5px;
-    padding-bottom: 30px;
-    border: 1px solid #000;
-    margin-bottom: 5px;
-    font-size: medium;
-
+    font-size: 12pt;
+    height: 40px;
+    width: 87%;
+    margin-top: 15px;
 }
-
-#add
+.heading
 {
-    /* position: relative;
-    left:200px; */
-    width: 90%;
-    background-color: #000; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 30px;
-    text-align: center;
-    display: inline-block;
+    margin-top: 20px;
     font-size: 20px;
-    margin-bottom: 5px;
-    border: 1px solid #000;
-    cursor: pointer;
+}
+
+    .add {
+        background-color: #000000; 
+        border: none;
+        color: white;
+        width: 90%;
+        height: 30px;
+        margin: 10px 0px 10px 0px;
+        padding: 5px 25px;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+    }
     
+    .div1 {
+      width: 90%;
+      margin: 0 auto;
+    }
+    
+    .movement {
+      width: 80%;
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+    .movement a {
+      display: inline-block;
+      color: black;
+      text-align: center;
+      border-style: solid;
+      border-color: pink;
+      border-width: 1px;
+      padding: 5px;
+      width: 28%;
+      font-size: 13px;
+      font-family: "sans-serif";
+    }
+    
+    .movement a:hover {
+        border-color: black;
+    }
+    
+    .movement a.Active {
+        border-color: black;
+        text-decoration: underline;
+    }
+    
+    .div2 {
+        text-align: left;
+        margin-top: 5px;
+        display: inline-block;
+        width: 80%;
+    }
+    
+    .remaining {
+        font-family: "sans-serif";
+        font-weight: bold;
+        color: black;
+    }
+    
+    .new-task {
+        display: inline-block;
+        width: 100%;
+    }
+    
+    .container {
+      position: relative;
+      font-family: "sans-serif";
+      padding-left: 37px;
+      padding-top: 8px;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 10px;
+    }
+    
+    .container input {
+      height: 0;
+      width: 0;
+    }
+    
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-style: solid;
+      border-width: 2px;
+      height: 25px;
+      width: 25px;
+      background-color: #FFFFFF;
+      
+    }
+    
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
 
-}
+    }
 
-.div1
-{
-    width:90%;
-    margin: 0 auto;
-
-}
-
-.movement
-{
-    width:80%;
-    display: inline-block;
-}
-
-.movement a {
-    display: inline-block;
-    color: black;
-    text-align: center;
-    border-style: solid;
-    border-color: pink;
-    border-width: 1px;
-    padding: 5px;
-    width: 28%;
-    font-size: 13px;
-    font-family: "sans-serif";
-}
-
-.div2
-{
-    text-align: left;
-    margin-top: 5px;
-    display: inline-block;
-    width: 80%;
-}
-#all
+    .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+    
+    .container input:checked ~ .checkmark:after {
+      display: block;
+    }
+    
+    .container .checkmark:after {
+      left: 9px;
+      top: 2px;
+      width: 5px;
+      height: 13px;
+      border: solid black;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+    
+    .text {
+      font-family: "sans-serif";
+    }
+    
+    .box {
+        height: 30px;
+        width: 30px;
+    }
+    
+    .button_group {
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 25px;
+    }
+    
+    .edit_button {
+        background-color: #FFFFFF; 
+        width: 49%;
+        height: 30px;
+        text-align: center;
+        margin-right: 2px;
+        outline-style: solid;
+        outline-color: black;
+        outline-width: thin;
+        font-size: 20px; 
+        cursor: pointer;
+    }
+    
+    .delete_button {
+        width: 49%;
+        height: 30px;
+        text-align: center;
+        margin-left: 2px;
+        background-color: rgba(190, 28, 28, 0.993);
+        color: white;
+        outline-style: solid;
+        outline-color: black;
+        outline-width: thin;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    
+    #all
 {   
     position: relative;
     left:-10px;
@@ -136,6 +236,7 @@ body
     cursor: pointer;
 
 }
+
 .add:active {
     transform: translateY(4px);
 }
@@ -148,155 +249,3 @@ body
 .comp:active {
     transform: translateY(4px);
 }
-
-#remain
-{
-    position: relative;
-    right:20%;
-    margin-bottom: 30px;
-}
-
-#check1
-{
-    position: relative;
-    right:60px;
-    /* font-size: 350px; */
-    margin-bottom: 20px;
-    transform: scale(2);
-    margin-top: 20px;
-    outline-style: solid;
-    outline-color: black;
-    outline-width: 0.03px;
-
-}
-
-.items
-{
-    position: relative;
-    right:150px;
-    font-size: 12px;
-}
-
-.button_combined
-{
-    text-align: center;
-    display: inline-block;
-    width: 100%;
-    margin-top: 20px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-bottom: 25px;
-}
-#edit
-{
-    position: relative;
-    left:20px;
-    width:49%;
-    bottom: 50px;
-    padding: 10px 10px;
-    background-color: #FFFFFF;
-    outline-style: solid;
-    outline-color: black;
-    outline-width: thin;
-    font-size: 20px;  
-    cursor: pointer;  
-}
-.edit
-{
-    position: relative;
-    left:20px;
-    width:49%;
-    bottom: 50px;
-    padding: 10px 10px;
-    background-color: #FFFFFF;
-    outline-style: solid;
-    outline-color: black;
-    outline-width: thin;
-    font-size: 20px;  
-    cursor: pointer;  
-}
-
-
-#delete
-{
-    position: relative;
-    left:20px;
-    width: 49%;
-    bottom: 50px;
-    padding: 10px 30px;
-    background-color: rgba(190, 28, 28, 0.993);
-    color: white;
-    outline-style: solid;
-    outline-color: black;
-    outline-width: thin;
-    font-size: 20px;
-    cursor: pointer;  
-
-}
-.delete
-{
-    position: relative;
-    left:20px;
-    width: 49%;
-    bottom: 50px;
-    padding: 10px 30px;
-    background-color: rgba(190, 28, 28, 0.993);
-    color: white;
-    outline-style: solid;
-    outline-color: black;
-    outline-width: thin;
-    font-size: 20px;
-    cursor: pointer;  
-
-}
-
-
-  input[type="checkbox"] {
-    -webkit-appearance: none;
-    appearance: none;
-    background-color: var(--form-background);
-    margin: -15px;
-  
-    font: inherit;
-    color: currentColor;
-    width: 2em;
-    height: 2em;
-    border: 0.12em solid currentColor;
-    border-radius: 0.15em;
-    transform: translateY(-0.075em);
-  
-    display: grid;
-    place-content: center;
-    position: relative;
-    left: 40px;
-  }
-  
-  input[type="checkbox"]::before {
-    content: "";
-    width: 1em;
-    height: 1em;
-    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
-    transform: scale(0);
-    transform-origin: bottom left;
-    transition: 120ms transform ease-in-out;
-    box-shadow: inset 1em 1em var(--form-control-color);
-    background-color: CanvasText;
-  }
-  
-  input[type="checkbox"]:checked::before {
-    transform: scale(1);
-  }
-  
-  input[type="checkbox"]:focus {
-    outline: max(2px, 0.15em) solid currentColor;
-    outline-offset: max(2px, 0.15em);
-  }
-  
-  #tex
-  {
-      position: relative;
-      bottom: 25px;
-      right: -70px;
-  }
-  
-  
