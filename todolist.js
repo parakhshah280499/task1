@@ -116,34 +116,34 @@
 //     window.location.reload();
 //   }, 5000);
 
-  var editId = "";
-var countOfAllTasks = 0;
-var countOfActiveTasks = 0;
-let allTaskBlocks = []; 
+  var editButtonId = "";
+var totaltaskscount = 0;
+var countactivetasks = 0;
+let todoArray = []; 
 
-var tab = 1;
+var flag = 1;
 
-function onAddTask()
+function addTask()
 {
-    let textField = document.getElementById("activ");
-    let newTask = textField.value;
-    let newTaskString = String(newTask);
+    let entered_text = document.getElementById("activ");
+    let task_new = entered_text.value;
+    let task_new_string = String(task_new);
     
     let valid = true;
 
-    let length = newTaskString.length;
+    let length = task_new_string.length;
     if(length == 0)
         valid = false;
     
-    let nonSpace = false;
-    for(let ch = 0; ch < length; ++ch)
-        if(newTaskString.charAt(ch) != ' ')
+    let non_space = false;
+    for(let i = 0; i < length; ++i)
+        if(task_new_string.charAt(i) != ' ')
             {
-            nonSpace = true;
+            non_space = true;
             break;
             }
     
-    valid = nonSpace;
+    valid = non_space;
         
     if(valid == false)  
         {
@@ -151,23 +151,23 @@ function onAddTask()
         return;
         }
         
-    textField.value = "";
+    entered_text.value = "";
         
-    if(editId.length > 0)
+    if(editButtonId.length > 0)
         {
-        changeTaskName(newTaskString);
-        editId = "";
+        tasknamenew(task_new_string);
+        editButtonId = "";
         return;
         }    
         
-    countOfActiveTasks += 1;
+    countactivetasks += 1;
     
-    countOfAllTasks += 1;
+    totaltaskscount += 1;
     
-    if(countOfAllTasks > 0)
+    if(totaltaskscount > 0)
         {
         let para = document.getElementById("remaining");
-        para.innerHTML = String(countOfActiveTasks) + " tasks remaining";
+        para.innerHTML = String(countactivetasks) + " tasks remaining";
         }
     else
         {
@@ -177,60 +177,60 @@ function onAddTask()
         
     let newID = String(Math.floor(Math.random() * 1000_000_000));
         
-    let newCheckBox = document.createElement("input"); 
-    newCheckBox.setAttribute("type", "checkbox");
-    newCheckBox.setAttribute("id", newID + "-checkbox");
-    newCheckBox.setAttribute("onchange", "onCheckBoxStateChange(this)");
+    let checkboxNew= document.createElement("input"); 
+    checkboxNew.setAttribute("type", "checkbox");
+    checkboxNew.setAttribute("id", newID + "-checkbox");
+    checkboxNew.setAttribute("onchange", "checkboxclick(this)");
     
-    let newCheckmark = document.createElement("span");
-    newCheckmark.setAttribute("class", "checkmark");
-    newCheckmark.setAttribute("id", newID + "-checkmark");
+    let checkmarkNew = document.createElement("span");
+    checkmarkNew.setAttribute("class", "checkmark");
+    checkmarkNew.setAttribute("id", newID + "-checkmark");
     
-    let newLabel = document.createElement("label");
-    newLabel.setAttribute("class", "container");
-    newLabel.setAttribute("id", newID + "-label");
-    newLabel.innerHTML = newTaskString;
+    let labelNew = document.createElement("label");
+    labelNew.setAttribute("class", "container");
+    labelNew.setAttribute("id", newID + "-label");
+    labelNew.innerHTML = task_new_string;
     
-    newLabel.appendChild(newCheckBox);
-    newLabel.appendChild(newCheckmark);
+    labelNew.appendChild(checkboxNew);
+    labelNew.appendChild(checkmarkNew);
   
-    let newEditButton = document.createElement("button");
-    newEditButton.setAttribute("type", "button");
-    newEditButton.setAttribute("class", "edit_button");
-    newEditButton.setAttribute("id", newID + "-edit");
-    newEditButton.setAttribute("onclick", "onEditTask(this)");
-    newEditButton.innerHTML = "Edit"; 
+    let editbuttonNew = document.createElement("button");
+    editbuttonNew.setAttribute("type", "button");
+    editbuttonNew.setAttribute("class", "edit_button");
+    editbuttonNew.setAttribute("id", newID + "-edit");
+    editbuttonNew.setAttribute("onclick", "edittask(this)");
+    editbuttonNew.innerHTML = "Edit"; 
         
-    let newDeleteButton = document.createElement("button");
-    newDeleteButton.setAttribute("type", "button");
-    newDeleteButton.setAttribute("class", "delete_button");
-    newDeleteButton.setAttribute("id", newID + "-delete");
-    newDeleteButton.setAttribute("onclick", "onDeleteTask(this)");
-    newDeleteButton.innerHTML = "Delete";
+    let deletebuttonNew = document.createElement("button");
+    deletebuttonNew.setAttribute("type", "button");
+    deletebuttonNew.setAttribute("class", "delete_button");
+    deletebuttonNew.setAttribute("id", newID + "-delete");
+    deletebuttonNew.setAttribute("onclick", "deletetask(this)");
+    deletebuttonNew.innerHTML = "Delete";
     
-    let newButtonGroup = document.createElement("div");
-    newButtonGroup.setAttribute("class", "button_group");
+    let buttton_combined_new = document.createElement("div");
+    buttton_combined_new.setAttribute("class", "button_group");
     
-    newButtonGroup.appendChild(newEditButton);
-    newButtonGroup.appendChild(newDeleteButton);
+    buttton_combined_new.appendChild(editbuttonNew);
+    buttton_combined_new.appendChild(deletebuttonNew);
     
-    let newTaskBlock = document.createElement("div");
-    newTaskBlock.setAttribute("class", "new-task");
-    newTaskBlock.setAttribute("id", newID);
+    let task_space_new = document.createElement("div");
+    task_space_new.setAttribute("class", "new-task");
+    task_space_new.setAttribute("id", newID);
     
-    newTaskBlock.appendChild(newLabel);
+    task_space_new.appendChild(labelNew);
     
-    newTaskBlock.appendChild(newButtonGroup);
+    task_space_new.appendChild(buttton_combined_new);
     
-    (document.getElementById("div2")).appendChild(newTaskBlock);
+    (document.getElementById("div2")).appendChild(task_space_new);
     
-    allTaskBlocks.push(newTaskBlock);
+    todoArray.push(task_space_new);
     
-    if(tab == 3)
-        newTaskBlock.style["display"] = "none";
+    if(flag == 3)
+        task_space_new.style["display"] = "none";
 }
 
-function onCheckBoxStateChange( checkbox )
+function checkboxclick( checkbox )
 {
     let label = checkbox.parentElement;
     
@@ -238,9 +238,9 @@ function onCheckBoxStateChange( checkbox )
     
     if(checkbox.checked)
         {
-        countOfActiveTasks -= 1;
+        countactivetasks -= 1;
         
-        if(tab == 2)
+        if(flag == 2)
             taskBlock.style["display"] = "none";
         
         label.style["text-decoration"] = "line-through";
@@ -249,19 +249,19 @@ function onCheckBoxStateChange( checkbox )
         }
     else
         {
-        countOfActiveTasks += 1;
+        countactivetasks += 1;
         
-        if(tab == 3)
+        if(flag == 3)
             taskBlock.style["display"] = "none";
         
         label.style["text-decoration"] = "initial";
         }
         
     let para = document.getElementById("remaining");
-    para.innerHTML = String(countOfActiveTasks) + " tasks remaining";    
+    para.innerHTML = String(countactivetasks) + " tasks remaining";    
 }
 
-function onDeleteTask( deleteButton )
+function deletetask( deleteButton )
 {    
     let buttonGroup = deleteButton.parentElement;
     
@@ -269,11 +269,11 @@ function onDeleteTask( deleteButton )
     
     let taskBlockId = taskBlock.getAttribute("id");
     
-    if(taskBlockId == editId)
+    if(taskBlockId == editButtonId)
         {
-        editId = "";
-        let textField = document.getElementById("activ");
-        textField.value = "";
+        editButtonId = "";
+        let entered_text = document.getElementById("activ");
+        entered_text.value = "";
         }    
     
     let checkBoxId = taskBlockId + "-checkbox";
@@ -281,14 +281,14 @@ function onDeleteTask( deleteButton )
     let checkBox = document.getElementById(checkBoxId); 
     
     if(checkBox.checked == false)
-        countOfActiveTasks -= 1;
+        countactivetasks -= 1;
         
-    countOfAllTasks -= 1;    
+    totaltaskscount -= 1;    
     
-    if(countOfAllTasks > 0)
+    if(totaltaskscount > 0)
         {
         let para = document.getElementById("remaining");
-        para.innerHTML = String(countOfActiveTasks) + " tasks remaining";   
+        para.innerHTML = String(countactivetasks) + " tasks remaining";   
         }
      else
         {
@@ -298,16 +298,16 @@ function onDeleteTask( deleteButton )
     
     (document.getElementById("div2")).removeChild(taskBlock);
     
-    allTaskBlocks = allTaskBlocks.filter(item => (item.getAttribute("id")) !== taskBlockId);
+    todoArray = todoArray.filter(item => (item.getAttribute("id")) !== taskBlockId);
 }
 
-function onEditTask( editButton )
+function edittask( editButton )
 {
     let buttonGroup = editButton.parentElement;
     
     let taskBlock = buttonGroup.parentElement;
     
-    editId = taskBlock.getAttribute("id");
+    editButtonId = taskBlock.getAttribute("id");
     
     let label = taskBlock.firstChild;
     
@@ -316,24 +316,103 @@ function onEditTask( editButton )
     let firstIndex = innerHTMLContent.indexOf("<");
     let task = innerHTMLContent.substring(0, firstIndex);
     
-    let textField = document.getElementById("activ");
-    textField.value = task;
+    let entered_text = document.getElementById("activ");
+    entered_text.value = task;
 }
 
-function changeTaskName( newTaskString )
+function tasknamenew( task_new_string )
 {
-    let taskBlock = document.getElementById(editId);
+    let taskBlock = document.getElementById(editButtonId);
 
-    let checkboxId = editId + "-checkbox";
-    let checkmarkId = editId + "-checkmark";
-    let labelId = editId + "-label";
+    let checkboxId = editButtonId + "-checkbox";
+    let checkmarkId = editButtonId + "-checkmark";
+    let labelId = editButtonId + "-label";
 
     let checkbox = document.getElementById(checkboxId);
     let checkmark = document.getElementById(checkmarkId);
     let label = document.getElementById(labelId);
     
-    label.innerHTML = newTaskString;
+    label.innerHTML = task_new_string;
     
     label.appendChild(checkbox);
     label.appendChild(checkmark);
 }
+
+function clickAll()
+{
+    let all = document.getElementById("all2");
+    let active = document.getElementById("activ2");
+    let completed = document.getElementById("comp");
+    
+    all.setAttribute("class", "all");
+    active.setAttribute("class", "a");
+    completed.setAttribute("class", "a");
+
+    for(let i = 0 ; i < todoArray.length; ++i)
+        {
+        let taskBlock = todoArray[i];
+      
+        taskBlock.style["display"] = "inline-block";
+        }
+    
+    flag = 1;
+}
+
+function clickActive()
+{
+    let all = document.getElementById("all2");
+    let active = document.getElementById("activ2");
+    let completed = document.getElementById("comp");
+    
+    all.setAttribute("class", "a");
+    active.setAttribute("class", "all");
+    completed.setAttribute("class", "a");
+
+    for(let i = 0 ; i < todoArray.length; ++i)
+        {
+        let taskBlock = todoArray[i];
+        
+        let taskBlockId = taskBlock.getAttribute("id");
+        
+        let checkBoxId = taskBlockId + "-checkbox";
+    
+        let checkBox = document.getElementById(checkBoxId); 
+        
+        if(checkBox.checked)
+            taskBlock.style["display"] = "none";
+        else
+            taskBlock.style["display"] = "inline-block";
+        }
+    
+    flag = 2;
+}
+
+function clickCompleted()
+{
+    let all = document.getElementById("all2");
+    let active = document.getElementById("activ2");
+    let completed = document.getElementById("comp");
+    
+    all.setAttribute("class", "a");
+    active.setAttribute("class", "a");
+    completed.setAttribute("class", "all");
+    
+    for(let i = 0 ; i < todoArray.length; ++i)
+        {
+        let taskBlock = todoArray[i];
+        
+        let taskBlockId = taskBlock.getAttribute("id");
+        
+        let checkBoxId = taskBlockId + "-checkbox";
+    
+        let checkBox = document.getElementById(checkBoxId); 
+        
+        if(checkBox.checked == false)
+            taskBlock.style["display"] = "none";
+        else
+            taskBlock.style["display"] = "inline-block";
+        }
+    
+    flag = 3;
+}
+

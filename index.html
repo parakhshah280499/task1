@@ -11,13 +11,13 @@
                     <label for="activ"> </label><br>
                     <input type="text" id="activ" class="activ" placeholder="Add Task . . ."><br>
                 
-                <button id="add" class="add" type="button" onclick = "onAddTask()" >Add</button><br>
+                <button id="add" class="add" type="button" onclick = "addTask()" >Add</button><br>
                 
                 <div class="div1">
                     <div class="movement">
-                        <button id="all" class="all" type="button">All</button>
-                        <button id="activ2" class="activ2" type="button">Active</button>
-                        <button id="comp" class="comp" type="button">Completed</button>
+                        <a id="all2" class="all" onclick="clickAll()">All</a>
+                        <a id="activ2" onclick="clickActive()">Active</a>
+                        <a id="comp" onclick="clickCompleted()">Completed</a>
 
                     </div>
 
